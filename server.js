@@ -18,8 +18,6 @@ app.use(cors())
 // Routes
 app.use('/auth', authRoute)
 
-
-
 // Server Instance running
 app.listen(PORT, ()=>console.log(`server running on port: ${PORT}`))
 

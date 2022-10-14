@@ -1,10 +1,27 @@
-POST http://localhost:7777/auth/login
+POST http://localhost:8080/auth/login
 Content-Type: application/json
 
 {"username":"yogesh"}
 
 ###
 
-GET http://localhost:8080/auth/get
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoieW9nZXNoIiwiaWF0IjoxNjY1NDIyNjkxfQ.OaQe4ZBMChrly078Rgna_1XTQsKK3gSLgT4-yeke9VA
+POST http://localhost:8080/auth/token
+Content-Type: application/json
 
+{
+    "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoieW9nZXNoIiwiYWNjZXNzQWxsb3dlZCI6WyJwb3N0cyIsInByb2ZpbGUiXSwiaWF0IjoxNjY1NzQ1MzQ5fQ.00H1sjqoeC5N-u98Q-kXqlsHHwU-Rl8231-ISLZpMqE"
+}
+
+###
+
+GET http://localhost:8080/auth/get
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoieW9nZXNoIiwiYWNjZXNzQWxsb3dlZCI6WyJwb3N0cyIsInByb2ZpbGUiXSwiaWF0IjoxNjY1NzQ1MDU3LCJleHAiOjE2NjU3NDUwNzJ9.S5hmQ5-9u9MoJyPmA8lzkbHdZczpBJOVcemukq_YxKs
+
+###
+
+DELETE http://localhost:8080/auth/logout
+Content-Type: application/json 
+
+{ "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoieW9nZXNoIiwiYWNjZXNzQWxsb3dlZCI6WyJwb3N0cyIsInByb2ZpbGUiXSwiaWF0IjoxNjY1NzQ1MzQ5fQ.00H1sjqoeC5N-u98Q-kXqlsHHwU-Rl8231-ISLZpMqE" }
+
+###
